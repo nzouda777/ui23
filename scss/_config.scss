@@ -1,0 +1,73 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+  
+  font-size: .85rem
+}
+$primary-color-300: #343f52; 
+$primary-color-100: #60697b;
+$secondary-color-300: #6cb769;
+$secondary-color-100: #6db76a;
+$thirdly-color-300: #E20919;
+@mixin gridColumn($colNum,$gap){
+    display: grid;
+    grid-template-columns: repeat($colNum, 1fr);
+    gap: $gap;
+}
+$media-xl: 1200px;
+$media-lg: 1199px;
+$media-md: 768px;
+$mobile: 992px;
+$mobile-sm: 600px;
+
+@mixin mobile-sm {
+  @media (max-width: $mobile-sm){
+      @content;
+  }
+}
+  @mixin mobile {
+    @media (max-width: $mobile){
+        @content;
+    }
+  }
+  @mixin media-md {
+    @media  (max-width: $media-md){
+        @content;
+    }
+  }
+  @mixin media-lg {
+    @media  (min-width: $media-lg){
+        @content;
+    }
+  }
+  @mixin media-xl {
+    @media  (min-width: $media-xl){
+        @content;
+    }
+  }
+
+@mixin mobile {
+  @media (max-width: $mobile){
+      @content;
+  }
+}
+@mixin media-md {
+  @media  (max-width: $media-md){
+      @content;
+  }
+}
+@mixin media-lg {
+  @media  (min-width: $media-lg){
+      @content;
+  }
+}
+@mixin media-xl {
+  @media  (min-width: $media-xl){
+      @content;
+  }
+}
